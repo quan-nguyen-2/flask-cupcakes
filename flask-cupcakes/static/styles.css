@@ -1,0 +1,56 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1596313050598-ba4cdecf1404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h3 {
+    margin: 3rem;
+    background-color: rgba(254, 186, 239, .7);
+    border: 2px solid purple;
+    border-radius: 10px;
+    padding: 10px;
+    color: rgb(73, 0, 73);
+}
+
+.card-text {
+    text-transform: capitalize;
+}
+
+.bad-search {
+    background-color: rgba(255, 225, 248, .7);
+    border: 2px solid purple;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+.card {
+    border: 3px solid purple;
+    background-color: ivory;
+    box-shadow: 5px 10px 18px #000000;
+}
+
+#new-cupcake {
+    font-weight: bold;
+    margin-bottom: 3rem;
+    border: 2px solid purple;
+    background-color: rgba(255, 255, 240, .7);
+}
+
+#new-cupcake input {
+    background-color: rgb(255, 225, 248);
+}
+
+#edit-cupcake {
+    font-weight: bold;
+    margin-bottom: 3rem;
+    border: 2px solid purple;
+    background-color: rgba(255, 255, 240, .7);
+}
+
+#edit-cupcake input {
+    background-color: rgb(255, 225, 248);
+}
+

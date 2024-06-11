@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} Cupcake {{cupcake.id}} - {{cupcake.flavor}} {% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="card mt-4 col-md-6">
+        <img src="{{cupcake.image}}" class="card-img-top image" style="max-height: 15rem; object-fit: cover;"alt="A picture of a cupcake">
+        <div class="card-body">
+            <h5 class="card-title flavor">{{cupcake.flavor.upper()}}</h5>
+            <p class="card-text"><b>Rating:</b> <span class="rating">{{cupcake.rating}}</span></p>
+            <p class="card-text"><b>Size:</b> <span class="size">{{cupcake.size}}</span></p>
+            <button data-id={{cupcake.id}} class="btn btn-danger delete">Delete Cupcake</button>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+
+    <h3>Edit Cupcake Details</h3>
+        <form method="POST" id="edit-cupcake" class="form-control">
+            <label for="flavor">Cupcake Flavor:</label>
+                <input type="text" name="flavor" id="flavor" class="form-control" value="{{cupcake.flavor}}" required>
+            <label for="size">Cupcake Size:</label>
+                <input type="text" name="size" id="size" class="form-control" value="{{cupcake.size}}" required>
+            <label for="rating">Cupcake Rating:</label>
+                <input type="number" name="rating" id="rating" class="form-control" min="1" max="10" value="{{cupcake.rating}}" required>
+            <label for="image">Cupcake Picture URL:</label>
+                <input type="text" name="image" id="image" class="form-control" value="{{cupcake.image}}" required>
+            <button data-id="{{cupcake.id}}" class="btn btn-success mt-3 edit-btn">Save Edits</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

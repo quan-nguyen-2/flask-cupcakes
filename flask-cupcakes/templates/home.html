@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} Cupcakes Homepage {% endblock %}
+
+{% block content %}
+
+
+    <h3>All Cupcakes</h3>
+    <div class="row justify-content-center" id="cupcakes-container">
+
+    </div>
+
+    <h3>Add a New Cupcake</h3>
+    <form method="POST" id="new-cupcake" class="form-control">
+        <label for="flavor">Cupcake Flavor:</label>
+            <input type="text" name="flavor" id="flavor" class="form-control" required>
+        <label for="size">Cupcake Size:</label>
+            <input type="text" name="size" id="size" class="form-control" required>
+        <label for="rating">Cupcake Rating:</label>
+            <input type="number" name="rating" id="rating" min="1" max="10" class="form-control" required>
+        <label for="image">Cupcake Picture URL:</label>
+            <input type="text" name="image" id="image" class="form-control"required>
+        <button class="btn btn-success mt-3">Add Cupcake</button>
+    </form>
+
+{% endblock %}
